@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Project";
+}
+@model Project
+<h1>Project Form</h1>
+
+<div>
+    <form method="post">
+        <div asp-validation-summary="All"></div>
+
+        <label asp-for="ProjectName">Project Name:</label>
+        <input asp-for="ProjectName" /><br />
+
+        <label asp-for="ProjectType">Project Type:</label>
+        <input asp-for="ProjectType" /><br />
+
+        <label asp-for="ProjectImpact">Project Impact:</label>
+        <input asp-for="ProjectImpact" /><br />
+
+        <label asp-for="ProjectRegionalProgram">Project Regional Program:</label>
+        <input asp-for="ProjectRegionalProgram" /><br />
+
+        <label asp-for="ProjectPhase">Project Phase:</label>
+        <input asp-for="ProjectPhase" /><br />
+
+        <label asp-for="ProjectFunctionalityStatus">Project Functionality Status:</label>
+        <input asp-for="ProjectFunctionalityStatus" /><br />
+
+        <button type="submit">Submit</button>
+    </form>
+</div>

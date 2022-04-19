@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1 class="text-center">Projects</h1>
+
+<a asp-controller="Home" asp-action="Create" class="btn btn-primary mb-3">Create</a><br />
+<table class="table table-bordered table-striped">
+    <thead class="font-weight-bold thead-dark">
+        <tr>
+            <td>Project Name</td>
+            <td>Project Type</td>
+            <td>Project Regional Program</td>
+            <td>Project Impact</td>
+            <td>Project Phase</td>
+            <td> Project Functionality Status</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (var i in ViewBag.ProjectList)
+            {
+                <tr>
+                    <td>@i.ProjectName</td>
+                    <td>@i.ProjectType</td>
+                    <td>@i.ProjectRegionalProgram</td>
+                    <td>@i.ProjectImpact</td>
+                    <td>@i.ProjectPhase</td>
+                    <td>@i.ProjectFunctionalityStatus</td>
+
+                    <td><a asp-controller="Home" asp-action="Edit" asp-route-projectid="@i.ProjectId">Edit</a></td>
+                    <td><a asp-controller="Home" asp-action="Delete" asp-route-projectid="@i.ProjectId">Delete</a></td>
+
+                </tr>
+            }
+    </tbody>
+</table>
+
